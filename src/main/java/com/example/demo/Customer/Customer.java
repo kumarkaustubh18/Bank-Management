@@ -4,15 +4,15 @@ public class Customer {
 
 
     private String name;
-    private int account_id;
+    private String id;
     private int age;
 
     public Customer() {
     }
 
-    public Customer(String name, int account_id, int age) {
+    public Customer(String name, String id, int age) {
         this.name = name;
-        this.account_id = account_id;
+        this.id = id;
         this.age = age;
     }
 
@@ -24,12 +24,12 @@ public class Customer {
         this.name = name;
     }
 
-    public int getAccount_id() {
-        return account_id;
+    public String getId() {
+        return id;
     }
 
-    public void setAccount_id(int account_id) {
-        this.account_id = account_id;
+    public void setAccount_id(String account_id) {
+        this.id = account_id;
     }
 
     public int getAge() {
