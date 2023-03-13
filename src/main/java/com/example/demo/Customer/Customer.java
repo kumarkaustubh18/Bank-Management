@@ -7,18 +7,18 @@ public class Customer {
     private String id;
     private int age;
 
-    private String status;
+    private String account_Number;
 
     public Customer() {
     }
 
 
 
-    public Customer(String name, String id, int age, String status) {
+    public Customer(String name, String id, int age, String account_Number) {
         this.name = name;
         this.id = id;
         this.age = age;
-        this.status=status;
+        this.account_Number=account_Number;
     }
 
     public String getName() {
@@ -33,8 +33,8 @@ public class Customer {
         return id;
     }
 
-    public void setAccount_id(String account_id) {
-        this.id = account_id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getAge() {
@@ -45,11 +45,11 @@ public class Customer {
         this.age = age;
     }
 
-    public String getStatus() {
-        return status;
+    public String getaccount_Number() {
+        return account_Number;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setaccount_Number(String account_Number) {
+        this.account_Number = account_Number;
     }
 }

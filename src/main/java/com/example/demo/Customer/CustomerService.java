@@ -10,9 +10,9 @@ import java.util.List;
 public class CustomerService {
 
   private  List<Customer> customers= new ArrayList<>(Arrays.asList(
-            new Customer("ankit","12321213",18,"active"),
-            new Customer("amit","65675343",21,"active"),
-            new Customer("aman","53532671",24,"inactive")
+            new Customer("ankit","active",18,"17837653"),
+            new Customer("amit","inactive",21,"9287361"),
+            new Customer("aman","active",24,"81728765")
     ));
 
 
