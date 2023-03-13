@@ -24,7 +24,24 @@ public class CustomerService {
        return customers.stream().filter(t->t.getId().equals(id)).findFirst().get();
     }
 
+
     public void addCustomer(Customer customer) {
      customers.add(customer);
+    }
+
+    public void updateCustomer(String id,Customer customer) {
+        for(int i=0;i<customers.size();i++)
+        {
+            Customer c=customers.get(i);
+            if(c.getId().equals(id)) {
+                customers.set(i, customer);
+                return;
+            }
+
+        }
+    }
+
+    public void deleteCustomer(String id) {
+        customers.removeIf(t->t.getId().equals(id));
     }
 }
