@@ -5,14 +5,15 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class CustomerService {
 
   private  List<Customer> customers= new ArrayList<>(Arrays.asList(
-            new Customer("ankit","active",18,"17837653"),
-            new Customer("amit","inactive",21,"9287361"),
-            new Customer("aman","active",24,"81728765")
+            new Customer("ankit",acc(),18,"active"),
+            new Customer("amit",acc(),21,"active"),
+            new Customer("aman",acc(),24,"active")
     ));
 
 
@@ -42,6 +43,15 @@ public class CustomerService {
     }
 
     public void deleteCustomer(String id) {
-        customers.removeIf(t->t.getId().equals(id));
+
+            customers.removeIf(t -> t.getId().equals(id));
+
+    }
+
+    public String acc()
+    {
+        Random rnd = new Random();
+        int x = 10000000 + rnd.nextInt(90000000);
+        return String.valueOf(x);
     }
 }
